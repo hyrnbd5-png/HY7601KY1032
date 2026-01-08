@@ -1,4 +1,4 @@
-/* General styles */
+/* 기본 스타일 */
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +6,10 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #fbe0e6; /* Pinkish background */
+  font-family: 'Roboto', sans-serif; /* Google Font 사용 */
+  background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
 
 h1, h2 {
   font-size: 2em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -31,23 +31,40 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header */
+/* 헤더 스타일 */
 header {
-  background-color: #ff4f7f; /* Lighter pink background */
+  background-color: #ff4f7f; /* 밝은 핑크색 배경 */
   color: white;
-  padding: 20px 0;
   text-align: center;
+  padding: 50px 0;
+  background-image: url('images/header-background.jpg'); /* 배경 이미지 */
+  background-size: cover;
+  background-position: center;
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 header p {
   font-size: 1.2em;
 }
 
-/* Section styles */
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* 섹션 스타일 */
 .section {
   padding: 40px 0;
   background-color: #ffffff;
@@ -58,41 +75,92 @@ header p {
   background-color: #f9f9f9;
 }
 
-ul {
-  list-style-type: none;
-  margin: 20px 0;
+h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-ul li {
+/* Overview 섹션 (텍스트 + 이미지) */
+#overview .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#overview .text {
+  width: 60%;
+}
+
+#overview .image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 임상 연구 결과 */
+#clinical ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+#clinical ul li {
   margin-bottom: 10px;
 }
 
-ul li a {
-  font-size: 1.1em;
-  color: #007bff;
-}
-
-ul li a:hover {
-  text-decoration: underline;
-}
-
-ul li img {
-  width: 150px;
+#clinical .chart {
+  width: 100%;
+  max-width: 600px;
   height: auto;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* 제품 예시 섹션 */
+#products .product {
+  display: inline-block;
+  width: 48%;
+  margin: 10px 1%;
+  text-align: center;
+}
+
+#products .product img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#products .product h3 {
+  font-size: 1.2em;
   margin-top: 10px;
 }
 
-#reviews p {
+/* 리뷰 섹션 */
+#reviews .review {
+  font-size: 1.2em;
   font-style: italic;
   margin-top: 20px;
 }
 
-/* Footer */
+#reviews .review-icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 footer {
   background-color: #333;
   color: white;
-  padding: 20px 0;
   text-align: center;
+  padding: 20px 0;
 }
 
 footer p {
